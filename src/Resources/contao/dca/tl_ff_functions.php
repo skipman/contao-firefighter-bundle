@@ -82,7 +82,7 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
     ),
     // Palettes
     'palettes'    => array(
-        'default'      => '{function_legend},ff_function_short,ff_function_long',
+        'default'      => '{function_legend},ff_function_short,ff_function_long, ff_function_overlocal',
     ),
 
     // Fields
@@ -110,7 +110,14 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
             'flag'       => 1,
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
-        )
+        ),
+        'ff_function_overlocal' => array
+		(
+			'exclude'                 => true,
+			'inputType'               => 'checkbox',
+			'eval'                    => array('tl_class'=>'w50 m12'),
+			'sql'                     => "char(1) COLLATE ascii_bin NOT NULL default ''"
+		)
     )
 );
 

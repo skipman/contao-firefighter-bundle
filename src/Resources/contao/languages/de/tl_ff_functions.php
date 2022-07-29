@@ -28,8 +28,9 @@ $GLOBALS['TL_LANG']['tl_ff_functions']['show']   = ["Datensatz mit ID: %s ansehe
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short'] = ["Funktion - Kürzel", "Geben Sie die Abkürzung für die Funktion ein"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']  = ["Funktion - Langbezeichnung", "Geben Sie den vollen Wortlaut der Funktion ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short']      = ["Funktion - Kürzel", "Geben Sie die Abkürzung für die Funktion ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']       = ["Funktion - Langbezeichnung", "Geben Sie den vollen Wortlaut der Funktion ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_overlocal']  = ["Überörtliche Funktion?", "Aktivieren, wenn es sich um eine überörtliche Funktion handelt"];
 
 /**
  * References

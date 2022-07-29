@@ -30,6 +30,7 @@ $GLOBALS['TL_LANG']['tl_ff_functions']['show']   = ["View record with ID: %s", "
  */
 $GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short'] = ["Function abbreviation", "Enter the abbreviation for the function"];
 $GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']  = ["Function Long Designation", "Enter the full text of the function"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_overlocal']  = ["Regional function?", "Activate if it is a regional function"];
 
 /**
  * References
