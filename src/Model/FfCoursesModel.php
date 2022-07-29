@@ -17,13 +17,13 @@ namespace Skipman\ContaoFirefighterBundle\Model;
 use Contao\Model;
 
 /**
- * Class FfRanksModel
+ * Class FfCoursesModel
  *
  * @package Skipman\ContaoFirefighterBundle\Model
  */
-class FfRanksModel extends Model
+class FfCoursesModel extends Model
 {
-    protected static $strTable = 'tl_ff_ranks';
+    protected static $strTable = 'tl_ff_courses';
 
 }
 

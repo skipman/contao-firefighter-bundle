@@ -17,9 +17,9 @@ use Contao\DC_Table;
 use Contao\Input;
 
 /**
- * Table tl_ff_functions
+ * Table tl_ff_courses
  */
-$GLOBALS['TL_DCA']['tl_ff_functions'] = array(
+$GLOBALS['TL_DCA']['tl_ff_courses'] = array(
 
     // Config
     'config'      => array(
@@ -33,18 +33,18 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
     ),
     'edit'        => array(
         'buttons_callback' => array(
-            array('tl_ff_functions', 'buttonsCallback')
+            array('tl_ff_courses', 'buttonsCallback')
         )
     ),
     'list'        => array(
         'sorting'           => array(
             'mode'        => 2,
-            'fields'      => array('ff_function_short'),
+            'fields'      => array('ff_course_short'),
             'flag'        => 1,
             'panelLayout' => 'filter;sort,search,limit'
         ),
         'label'             => array(
-            'fields' => array('ff_function_short'),
+            'fields' => array('ff_course_short'),
             'format' => '%s',
         ),
         'global_operations' => array(
@@ -57,23 +57,23 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
         ),
         'operations'        => array(
             'edit'   => array(
-                'label' => &$GLOBALS['TL_LANG']['tl_ff_functions']['edit'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ff_courses']['edit'],
                 'href'  => 'act=edit',
                 'icon'  => 'edit.svg'
             ),
             'copy'   => array(
-                'label' => &$GLOBALS['TL_LANG']['tl_ff_functions']['copy'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ff_courses']['copy'],
                 'href'  => 'act=copy',
                 'icon'  => 'copy.svg'
             ),
             'delete' => array(
-                'label'      => &$GLOBALS['TL_LANG']['tl_ff_functions']['delete'],
+                'label'      => &$GLOBALS['TL_LANG']['tl_ff_courses']['delete'],
                 'href'       => 'act=delete',
                 'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
             ),
             'show'   => array(
-                'label'      => &$GLOBALS['TL_LANG']['tl_ff_functions']['show'],
+                'label'      => &$GLOBALS['TL_LANG']['tl_ff_courses']['show'],
                 'href'       => 'act=show',
                 'icon'       => 'show.svg',
                 'attributes' => 'style="margin-right:3px"'
@@ -82,7 +82,7 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
     ),
     // Palettes
     'palettes'    => array(
-        'default'      => '{function_legend},ff_function_short,ff_function_long, ff_function_overlocal',
+        'default'      => '{course_legend},ff_course_short,ff_course_long',
     ),
 
     // Fields
@@ -93,7 +93,7 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
         'tstamp'         => array(
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
-        'ff_function_short'          => array(
+        'ff_course_short'          => array(
             'inputType'  => 'text',
             'exclude'    => true,
             'search'     => true,
@@ -103,30 +103,23 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = array(
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
         ),
-        'ff_function_long'          => array(
+        'ff_course_long'          => array(
             'inputType'  => 'text',
             'exclude'    => true,
             'search'     => true,
             'flag'       => 1,
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
-        ),
-        'ff_function_overlocal' => array
-		(
-			'exclude'                 => true,
-			'inputType'               => 'checkbox',
-			'eval'                    => array('tl_class'=>'w50 m12'),
-			'sql'                     => "char(1) COLLATE ascii_bin NOT NULL default ''"
-		)
+        )
     )
 );
 
 /**
- * Class tl_ff_functions
+ * Class tl_ff_courses
  */
 
 // Nicht benötigter Button im Fußbereich 
-class tl_ff_functions extends Backend
+class tl_ff_courses extends Backend
 {
     /**
      * @param $arrButtons
@@ -137,7 +130,7 @@ class tl_ff_functions extends Backend
     {
         if (Input::get('act') === 'edit')
         {
-            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_ff_functions']['customButton'] . '</button>';
+            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_ff_courses']['customButton'] . '</button>';
         }
 
         return $arrButtons;
