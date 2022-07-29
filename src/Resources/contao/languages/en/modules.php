@@ -16,7 +16,7 @@ declare(strict_types=1);
  * Backend modules
  */
 $GLOBALS['TL_LANG']['MOD']['firefighter'] = 'Firebrigade';
-$GLOBALS['TL_LANG']['MOD']['ranks'] = ['Ranks', 'Manage the ranks'];
-$GLOBALS['TL_LANG']['MOD']['functions'] = ['Functions', 'Manage the function'];
-$GLOBALS['TL_LANG']['MOD']['courses'] = ['Courses', 'Manage the courses'];
 $GLOBALS['TL_LANG']['MOD']['awards'] = ['Awards', 'Manage the awards'];
+$GLOBALS['TL_LANG']['MOD']['courses'] = ['Courses', 'Manage the courses'];
+$GLOBALS['TL_LANG']['MOD']['functions'] = ['Functions', 'Manage the function'];
+$GLOBALS['TL_LANG']['MOD']['ranks'] = ['Ranks', 'Manage the ranks'];

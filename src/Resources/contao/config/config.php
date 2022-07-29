@@ -18,23 +18,25 @@ use Skipman\ContaoFirefighterBundle\Model\FfCoursesModel;
 /**
  * Backend modules
  */
-$GLOBALS['BE_MOD']['firefighter']['ranks'] = array(
-    'tables' => array('tl_ff_ranks')
-);
-$GLOBALS['BE_MOD']['firefighter']['functions'] = array(
-    'tables' => array('tl_ff_functions')
+
+$GLOBALS['BE_MOD']['firefighter']['awards'] = array(
+    'tables' => array('tl_ff_awards')
 );
 $GLOBALS['BE_MOD']['firefighter']['courses'] = array(
     'tables' => array('tl_ff_courses')
 );
-//$GLOBALS['BE_MOD']['firefighter']['awards'] = array(
-//    'tables' => array('tl_ff_awards')
-//);
+$GLOBALS['BE_MOD']['firefighter']['functions'] = array(
+    'tables' => array('tl_ff_functions')
+);
+$GLOBALS['BE_MOD']['firefighter']['ranks'] = array(
+    'tables' => array('tl_ff_ranks')
+);
 
 /**
  * Models
  */
-$GLOBALS['TL_MODELS']['tl_ff_ranks']     = FfRanksModel::class;
-$GLOBALS['TL_MODELS']['tl_ff_functions'] = FfFunctionsModel::class;
+
+$GLOBALS['TL_MODELS']['tl_ff_awards']    = FfAwardsModel::class;
 $GLOBALS['TL_MODELS']['tl_ff_courses']   = FfCoursesModel::class;
-//$GLOBALS['TL_MODELS']['tl_ff_awards'] = FfAwardsModel::class;
+$GLOBALS['TL_MODELS']['tl_ff_functions'] = FfFunctionsModel::class;
+$GLOBALS['TL_MODELS']['tl_ff_ranks']     = FfRanksModel::class;
