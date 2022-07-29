@@ -39,12 +39,12 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
     'list'        => array(
         'sorting'           => array(
             'mode'        => 2,
-            'fields'      => array('title'),
+            'fields'      => array('ff_rank_short'),
             'flag'        => 1,
             'panelLayout' => 'filter;sort,search,limit'
         ),
         'label'             => array(
-            'fields' => array('title'),
+            'fields' => array('ff_rank_short'),
             'format' => '%s',
         ),
         'global_operations' => array(
@@ -82,13 +82,9 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
     ),
     // Palettes
     'palettes'    => array(
-        '__selector__' => array('addSubpalette'),
-        'default'      => '{first_legend},title,selectField,checkboxField,multitextField;{second_legend},addSubpalette'
+        'default'      => '{rank_legend},ff_rank_short,ff_rank_long,ff_rank_pic',
     ),
-    // Subpalettes
-    'subpalettes' => array(
-        'addSubpalette' => 'textareaField',
-    ),
+
     // Fields
     'fields'      => array(
         'id'             => array(
@@ -97,74 +93,39 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
         'tstamp'         => array(
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
-        'title'          => array(
-            'inputType' => 'text',
-            'exclude'   => true,
-            'search'    => true,
-            'filter'    => true,
-            'sorting'   => true,
-            'flag'      => 1,
-            'eval'      => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
-            'sql'       => "varchar(255) NOT NULL default ''"
+        'ff_rank_short'          => array(
+            'inputType'  => 'text',
+            'exclude'    => true,
+            'search'     => true,
+            'filter'     => true,
+            'sorting'    => true,
+            'flag'       => 11,
+            'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
+            'sql'        => "varchar(255) NOT NULL default ''"
         ),
-        'selectField'    => array(
-            'inputType' => 'select',
-            'exclude'   => true,
-            'search'    => true,
-            'filter'    => true,
-            'sorting'   => true,
-            'reference' => $GLOBALS['TL_LANG']['tl_ff_ranks'],
-            'options'   => array('firstoption', 'secondoption'),
-            //'foreignKey'            => 'tl_user.name',
-            //'options_callback'      => array('CLASS', 'METHOD'),
-            'eval'      => array('includeBlankOption' => true, 'tl_class' => 'w50'),
-            'sql'       => "varchar(255) NOT NULL default ''",
-            //'relation'  => array('type' => 'hasOne', 'load' => 'lazy')
+        'ff_rank_long'          => array(
+            'inputType'  => 'text',
+            'exclude'    => true,
+            'search'     => true,
+            'flag'       => 1,
+            'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
+            'sql'        => "varchar(255) NOT NULL default ''"
         ),
-        'checkboxField'  => array(
-            'inputType' => 'select',
-            'exclude'   => true,
-            'search'    => true,
-            'filter'    => true,
-            'sorting'   => true,
-            'reference' => $GLOBALS['TL_LANG']['tl_ff_ranks'],
-            'options'   => array('firstoption', 'secondoption'),
-            //'foreignKey'            => 'tl_user.name',
-            //'options_callback'      => array('CLASS', 'METHOD'),
-            'eval'      => array('includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'),
-            'sql'       => "varchar(255) NOT NULL default ''",
-            //'relation'  => array('type' => 'hasOne', 'load' => 'lazy')
-        ),
-        'multitextField' => array(
-            'inputType' => 'text',
-            'exclude'   => true,
-            'search'    => true,
-            'filter'    => true,
-            'sorting'   => true,
-            'eval'      => array('multiple' => true, 'size' => 4, 'decodeEntities' => true, 'tl_class' => 'w50'),
-            'sql'       => "varchar(255) NOT NULL default ''"
-        ),
-        'addSubpalette'  => array(
-            'exclude'   => true,
-            'inputType' => 'checkbox',
-            'eval'      => array('submitOnChange' => true, 'tl_class' => 'w50 clr'),
-            'sql'       => "char(1) NOT NULL default ''"
-        ),
-        'textareaField'  => array(
-            'inputType' => 'textarea',
-            'exclude'   => true,
-            'search'    => true,
-            'filter'    => true,
-            'sorting'   => true,
-            'eval'      => array('rte' => 'tinyMCE', 'tl_class' => 'clr'),
-            'sql'       => 'text NULL'
-        )
+		'ff_rank_pic' => array
+		(
+			'exclude'    => true,
+			'inputType'  => 'fileTree',
+			'eval'       => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
+			'sql'        => "binary(16) NULL"
+		)
     )
 );
 
 /**
  * Class tl_ff_ranks
  */
+
+// Nicht benötigter Button im Fußbereich 
 class tl_ff_ranks extends Backend
 {
     /**

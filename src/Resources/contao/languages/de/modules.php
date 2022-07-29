@@ -16,5 +16,5 @@ declare(strict_types=1);
  * Backend modules
  */
 $GLOBALS['TL_LANG']['MOD']['firefighter'] = 'Feuerwehr';
-$GLOBALS['TL_LANG']['MOD']['ranks'] = ['Dienstränge', 'Verwaltung der Dienstränge in meiner Feuerwehr'];
-
+$GLOBALS['TL_LANG']['MOD']['ranks']       = ['Dienstränge', 'Verwaltung der Dienstränge in meiner Feuerwehr'];
+$GLOBALS['TL_LANG']['MOD']['functions']   = ['Funktionen', 'Verwaltung der Funktionen in meiner Feuerwehr'];

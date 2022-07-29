@@ -17,4 +17,4 @@ declare(strict_types=1);
  */
 $GLOBALS['TL_LANG']['MOD']['firefighter'] = 'Firebrigade';
 $GLOBALS['TL_LANG']['MOD']['ranks'] = ['Ranks', 'Manage the ranks of the firebrigade'];
-
+$GLOBALS['TL_LANG']['MOD']['functions'] = ['Functions', 'Manage the function within the firebrigade'];
