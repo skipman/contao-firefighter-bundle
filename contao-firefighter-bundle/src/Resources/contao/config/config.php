@@ -11,6 +11,7 @@
  */
 
 use Skipman\ContaoFirefighterBundle\Model\FfRanksModel;
+use Skipman\ContaoFirefighterBundle\Model\FfFunctionsModel;
 
 /**
  * Backend modules
@@ -18,8 +19,12 @@ use Skipman\ContaoFirefighterBundle\Model\FfRanksModel;
 $GLOBALS['BE_MOD']['firefighter']['ranks'] = array(
     'tables' => array('tl_ff_ranks')
 );
+$GLOBALS['BE_MOD']['firefighter']['functions'] = array(
+    'tables' => array('tl_ff_functions')
+);
 
 /**
  * Models
  */
 $GLOBALS['TL_MODELS']['tl_ff_ranks'] = FfRanksModel::class;
+$GLOBALS['TL_MODELS']['tl_ff_functions'] = FfFunctionsModel::class;

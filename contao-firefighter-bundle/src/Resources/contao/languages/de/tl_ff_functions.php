@@ -28,8 +28,8 @@ $GLOBALS['TL_LANG']['tl_ff_functions']['show']   = ["Datensatz mit ID: %s ansehe
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short'] = ["Function abbreviation", "Enter the abbreviation for the function"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']  = ["Function Long Designation", "Enter the full text of the function"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short'] = ["Funktion - Kürzel", "Geben Sie die Abkürzung für die Funktion ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']  = ["Funktion - Langbezeichnung", "Geben Sie den vollen Wortlaut der Funktion ein"];
 
 /**
  * References

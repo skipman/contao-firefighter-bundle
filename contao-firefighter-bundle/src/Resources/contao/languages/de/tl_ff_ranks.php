@@ -28,8 +28,8 @@ $GLOBALS['TL_LANG']['tl_ff_ranks']['show']   = ["Datensatz mit ID: %s ansehen", 
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_ff_ranks']['ff_rank_short'] = ["Rang-Kürzel", "Geben Sie die Abkürzung für den Dienstrang ein"];
-$GLOBALS['TL_LANG']['tl_ff_ranks']['ff_rank_long']  = ["Rang-Langbezeichnung", "Geben Sie den vollen Wortlaut des Dienstrangs ein"];
+$GLOBALS['TL_LANG']['tl_ff_ranks']['ff_rank_short'] = ["Rang - Kürzel", "Geben Sie die Abkürzung für den Dienstrang ein"];
+$GLOBALS['TL_LANG']['tl_ff_ranks']['ff_rank_long']  = ["Rang - Langbezeichnung", "Geben Sie den vollen Wortlaut des Dienstrangs ein"];
 $GLOBALS['TL_LANG']['tl_ff_ranks']['ff_rank_pic']   = ["Bild", "Wählen Sie das Bild zum Dienstrang aus."];
 
 
