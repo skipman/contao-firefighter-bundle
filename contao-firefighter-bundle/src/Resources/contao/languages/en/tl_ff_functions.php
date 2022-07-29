@@ -15,34 +15,28 @@ declare(strict_types=1);
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['first_legend'] = "Basis Einstellungen";
-$GLOBALS['TL_LANG']['tl_ff_functions']['second_legend'] = "Erweiterte Einstellungen";
+$GLOBALS['TL_LANG']['tl_ff_functions']['function_legend'] = "Functions";
 
 /**
  * Operations
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['edit'] = ["Datensatz mit ID: %s bearbeiten", "Datensatz mit ID: %s bearbeiten"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['copy'] = ["Datensatz mit ID: %s kopieren", "Datensatz mit ID: %s kopieren"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['delete'] = ["Datensatz mit ID: %s löschen", "Datensatz mit ID: %s löschen"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['show'] = ["Datensatz mit ID: %s ansehen", "Datensatz mit ID: %s ansehen"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['edit']   = ["Edit record with ID: %s", "Edit record with ID: %s"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['copy']   = ["Copy record with ID: %s", "Copy record with ID: %s"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['delete'] = ["Delete record with ID: %s", "Delete record with ID: %s"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['show']   = ["View record with ID: %s", "View record with ID: %s"];
 
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['title'] = ["Titel", "Geben Sie den Titel ein"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['selectField'] = ["Select Feld", "Wählen Sie aus."];
-$GLOBALS['TL_LANG']['tl_ff_functions']['checkboxField'] = ["Chosen Feld", "Wählen Sie aus."];
-$GLOBALS['TL_LANG']['tl_ff_functions']['multitextField'] = ["Multitext Feld", "Geben Sie die Werte ein"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['addSubpalette'] = ["Erweiterte Einstellungen aktivieren", "Hier können Sie die erweiterten Einstellungen aktivieren."];
-$GLOBALS['TL_LANG']['tl_ff_functions']['textareaField'] = ["Textarea", "Geben Sie einen Text ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short'] = ["Funktion-Kürzel", "Geben Sie die Abkürzung für die Funktion ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']  = ["Funktion-Langbezeichnung", "Geben Sie den vollen Wortlaut der Funktion ein"];
 
 /**
  * References
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['firstoption'] = "Erste Option";
-$GLOBALS['TL_LANG']['tl_ff_functions']['secondoption'] = "Zweite Option";
+
 
 /**
  * Buttons
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['customButton'] = "Custom Routine starten";
+$GLOBALS['TL_LANG']['tl_ff_functions']['customButton'] = "Start Custom Routine";

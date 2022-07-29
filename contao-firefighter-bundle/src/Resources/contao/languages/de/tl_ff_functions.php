@@ -15,32 +15,26 @@ declare(strict_types=1);
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['first_legend'] = "Basis Einstellungen";
-$GLOBALS['TL_LANG']['tl_ff_functions']['second_legend'] = "Erweiterte Einstellungen";
+$GLOBALS['TL_LANG']['tl_ff_functions']['function_legend'] = "Funktionen";
 
 /**
  * Operations
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['edit'] = ["Datensatz mit ID: %s bearbeiten", "Datensatz mit ID: %s bearbeiten"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['copy'] = ["Datensatz mit ID: %s kopieren", "Datensatz mit ID: %s kopieren"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['edit']   = ["Datensatz mit ID: %s bearbeiten", "Datensatz mit ID: %s bearbeiten"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['copy']   = ["Datensatz mit ID: %s kopieren", "Datensatz mit ID: %s kopieren"];
 $GLOBALS['TL_LANG']['tl_ff_functions']['delete'] = ["Datensatz mit ID: %s löschen", "Datensatz mit ID: %s löschen"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['show'] = ["Datensatz mit ID: %s ansehen", "Datensatz mit ID: %s ansehen"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['show']   = ["Datensatz mit ID: %s ansehen", "Datensatz mit ID: %s ansehen"];
 
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['title'] = ["Titel", "Geben Sie den Titel ein"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['selectField'] = ["Select Feld", "Wählen Sie aus."];
-$GLOBALS['TL_LANG']['tl_ff_functions']['checkboxField'] = ["Chosen Feld", "Wählen Sie aus."];
-$GLOBALS['TL_LANG']['tl_ff_functions']['multitextField'] = ["Multitext Feld", "Geben Sie die Werte ein"];
-$GLOBALS['TL_LANG']['tl_ff_functions']['addSubpalette'] = ["Erweiterte Einstellungen aktivieren", "Hier können Sie die erweiterten Einstellungen aktivieren."];
-$GLOBALS['TL_LANG']['tl_ff_functions']['textareaField'] = ["Textarea", "Geben Sie einen Text ein"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_short'] = ["Function abbreviation", "Enter the abbreviation for the function"];
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_long']  = ["Function Long Designation", "Enter the full text of the function"];
 
 /**
  * References
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['firstoption'] = "Erste Option";
-$GLOBALS['TL_LANG']['tl_ff_functions']['secondoption'] = "Zweite Option";
+
 
 /**
  * Buttons
