@@ -1,0 +1,46 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/tl_member.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_member.prefix.0">
+        <source>Prefix</source>
+        <target>Präfix</target>
+      </trans-unit>
+      <trans-unit id="tl_member.prefix.1">
+        <source>Enter the member's title, prefixed (e.g. Ing., DI).</source>
+        <target>Geben Sie den vorangestellten Titel des Mitglieds ein (z.B. Ing., DI).</target>
+      </trans-unit>
+      <trans-unit id="tl_member.suffix.0">
+        <source>Suffix</source>
+        <target>Suffix</target>
+      </trans-unit>
+      <trans-unit id="tl_member.suffix.1">
+        <source>Enter the member's suffixed title (e.g. MBA., MSc).</source>
+        <target>Geben Sie den nachgestellten Titel des Mitglieds ein (z.B. MBA., MSc).</target>
+      </trans-unit>
+      <trans-unit id="tl_member.gender.0">
+        <source>Gender</source>
+        <target>Geschlecht</target>
+      </trans-unit>
+      <trans-unit id="tl_member.gender.1">
+        <source>Please choose the gender. This information can later be used for a gender-appropriate form of address, e.g. in newsletters.</source>
+        <target>Bitte wählen Sie das Geschlecht. Diese Angabe kann später für eine gendergerechte Anrede z.B. in Newslettern verwendet werden.</target>
+      </trans-unit>
+      <trans-unit id="tl_member.singleSRC.0">
+        <source>Photo</source>
+        <target>Foto</target>
+      </trans-unit>
+      <trans-unit id="tl_member.singleSRC.1">
+        <source>Choose a photo</source>
+        <target>Wählen Sie ein Foto des Mitglieds aus.</target>
+      </trans-unit>
+      <trans-unit id="tl_member.alt.0">
+        <source>Alt text</source>
+        <target>Alt Text</target>
+      </trans-unit>
+      <trans-unit id="tl_member.alt.1">
+        <source>The alternative text helps visually impaired people and Google to understand the content of the image.</source>
+        <target>Der Alternativ Text hilft sehbehinderten Menschen und Google, den Inhalt des Bildes zu verstehen.</target>
+      </trans-unit>s
+    </body>
+  </file>
+</xliff>

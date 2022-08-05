@@ -98,7 +98,7 @@ $GLOBALS['TL_DCA']['tl_ff_awards'] = array(
             'exclude'    => true,
             'search'     => true,
             'filter'     => true,
-            'sorting'    => true,
+        //    'sorting'    => true,
             'flag'       => 1,
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"

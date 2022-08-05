@@ -17,9 +17,9 @@ use Contao\DC_Table;
 use Contao\Input;
 
 /**
- * Table tl_ff_ranks
+ * Table tl_ff_badges
  */
-$GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
+$GLOBALS['TL_DCA']['tl_ff_badges'] = array(
 
     // Config
     'config'      => array(
@@ -31,21 +31,21 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
             )
         ),
     ),
-    'edit'        => array(
-        'buttons_callback' => array(
-            array('tl_ff_ranks', 'buttonsCallback')
-        )
-    ),
+//    'edit'        => array(
+//        'buttons_callback' => array(
+//            array('tl_ff_badges', 'buttonsCallback')
+//        )
+//    ),
     'list'        => array(
-        'sorting'         => array(
-            'mode'        => 2, // Sorting mode by a fixed field
-            'fields'      => array('ff_rank_long'),
-            'flag'        => 1, // Sort by initial letter ascending
+        'sorting'           => array(
+            'mode'        => 2,
+            'fields'      => array('ff_badge_short'),
+            'flag'        => 1,
             'panelLayout' => 'filter;sort,search,limit'
         ),
         'label'             => array(
-            'fields' => array('ff_rank_long'),
-            'format' => '%s'
+            'fields' => array('ff_badge_short'),
+            'format' => '%s',
         ),
         'global_operations' => array(
             'all' => array(
@@ -57,23 +57,23 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
         ),
         'operations'        => array(
             'edit'   => array(
-                'label' => &$GLOBALS['TL_LANG']['tl_ff_ranks']['edit'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ff_badges']['edit'],
                 'href'  => 'act=edit',
                 'icon'  => 'edit.svg'
             ),
             'copy'   => array(
-                'label' => &$GLOBALS['TL_LANG']['tl_ff_ranks']['copy'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ff_badges']['copy'],
                 'href'  => 'act=copy',
                 'icon'  => 'copy.svg'
             ),
             'delete' => array(
-                'label'      => &$GLOBALS['TL_LANG']['tl_ff_ranks']['delete'],
+                'label'      => &$GLOBALS['TL_LANG']['tl_ff_badges']['delete'],
                 'href'       => 'act=delete',
                 'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
             ),
             'show'   => array(
-                'label'      => &$GLOBALS['TL_LANG']['tl_ff_ranks']['show'],
+                'label'      => &$GLOBALS['TL_LANG']['tl_ff_badges']['show'],
                 'href'       => 'act=show',
                 'icon'       => 'show.svg',
                 'attributes' => 'style="margin-right:3px"'
@@ -82,7 +82,7 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
     ),
     // Palettes
     'palettes'    => array(
-        'default'      => '{rank_legend},ff_rank_short,ff_rank_long,ff_rank_pic',
+        'default'      => '{badge_legend},ff_badge_short,ff_badge_long',
     ),
 
     // Fields
@@ -93,7 +93,7 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
         'tstamp'         => array(
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
-        'ff_rank_short'          => array(
+        'ff_badge_short'          => array(
             'inputType'  => 'text',
             'exclude'    => true,
             'search'     => true,
@@ -103,31 +103,24 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
         ),
-        'ff_rank_long'          => array(
+        'ff_badge_long'          => array(
             'inputType'  => 'text',
             'exclude'    => true,
             'search'     => true,
             'flag'       => 1,
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
-        ),
-		'ff_rank_pic' => array
-		(
-			'exclude'    => true,
-			'inputType'  => 'fileTree',
-			'eval'       => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
-			'sql'        => "binary(16) NULL"
-		)
+        )
     )
 );
 
 /**
- * Class tl_ff_ranks
+ * Class tl_ff_badges
  */
 
-// Nicht benötigter CustomButton im Fußbereich 
-class tl_ff_ranks extends Backend
- {
+// Nicht benötigter Button im Fußbereich 
+class tl_ff_badges extends Backend
+{
     /**
      * @param $arrButtons
      * @param  DC_Table $dc
@@ -137,7 +130,7 @@ class tl_ff_ranks extends Backend
     {
         if (Input::get('act') === 'edit')
         {
-            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_ff_ranks']['customButton'] . '</button>';
+            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_ff_badges']['customButton'] . '</button>';
         }
 
         return $arrButtons;
