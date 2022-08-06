@@ -17,30 +17,22 @@
         <source>Enter the member's suffixed title (e.g. MBA., MSc).</source>
         <target>Geben Sie den nachgestellten Titel des Mitglieds ein (z.B. MBA., MSc).</target>
       </trans-unit>
-      <trans-unit id="tl_member.gender.0">
-        <source>Gender</source>
-        <target>Geschlecht</target>
+      <trans-unit id="tl_member.rank.0">
+        <source>Rank</source>
+        <target>Dienstgrad</target>
       </trans-unit>
-      <trans-unit id="tl_member.gender.1">
-        <source>Please choose the gender. This information can later be used for a gender-appropriate form of address, e.g. in newsletters.</source>
-        <target>Bitte wählen Sie das Geschlecht. Diese Angabe kann später für eine gendergerechte Anrede z.B. in Newslettern verwendet werden.</target>
+      <trans-unit id="tl_member.rank.1">
+        <source>Member`s Rank.</source>
+        <target>Dienstgrad des Mitglieds</target>
       </trans-unit>
-      <trans-unit id="tl_member.singleSRC.0">
-        <source>Photo</source>
-        <target>Foto</target>
+      <trans-unit id="tl_member.honory.0">
+        <source>Honory rank</source>
+        <target>Ehrendienstgrad</target>
       </trans-unit>
-      <trans-unit id="tl_member.singleSRC.1">
-        <source>Choose a photo</source>
-        <target>Wählen Sie ein Foto des Mitglieds aus.</target>
+      <trans-unit id="tl_member.honory.1">
+        <source>Select if it is an honorary rank.</source>
+        <target>Auswählen, wenn es ein Ehrendienstgrad ist</target>
       </trans-unit>
-      <trans-unit id="tl_member.alt.0">
-        <source>Alt text</source>
-        <target>Alt Text</target>
-      </trans-unit>
-      <trans-unit id="tl_member.alt.1">
-        <source>The alternative text helps visually impaired people and Google to understand the content of the image.</source>
-        <target>Der Alternativ Text hilft sehbehinderten Menschen und Google, den Inhalt des Bildes zu verstehen.</target>
-      </trans-unit>s
     </body>
   </file>
 </xliff>

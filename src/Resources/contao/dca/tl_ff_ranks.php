@@ -142,4 +142,7 @@ class tl_ff_ranks extends Backend
 
         return $arrButtons;
     }
-}
+
+};
+
+

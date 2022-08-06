@@ -14,23 +14,18 @@
       <trans-unit id="tl_member.suffix.1">
         <source>Enter the member's suffixed title (e.g. MBA., MSc).</source>
       </trans-unit>
-      <trans-unit id="tl_member.gender.0">
-        <source>Gender</source>
+      <trans-unit id="tl_member.rank.0">
+        <source>Rank</source>
       </trans-unit>
-      <trans-unit id="tl_member.gender.1">
-        <source>Please choose the gender. This information can later be used for a gender-appropriate form of address, e.g. in newsletters.</source>
+      <trans-unit id="tl_member.rank.1">
+        <source>Member`s Rank.</source>
       </trans-unit>
-      <trans-unit id="tl_member.singleSRC.0">
-        <source>Photo</source>
+      <trans-unit id="tl_member.honory.0">
+        <source>Honory rank</source>
       </trans-unit>
-      <trans-unit id="tl_member.singleSRC.1">
-        <source>Choose a photo</source>
+      <trans-unit id="tl_member.honory.1">
+        <source>Select if it is an honorary rank.</source>
       </trans-unit>
-      <trans-unit id="tl_member.alt.0">
-        <source>Alt text</source>
-      </trans-unit>
-      <trans-unit id="tl_member.alt.1">
-        <source>The alternative text helps visually impaired people and Google to understand the content of the image.</source>
     </body>
   </file>
 </xliff>
