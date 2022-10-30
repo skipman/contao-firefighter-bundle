@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /*
  * This file is part of Contao Firefighter Bundle.
- * 
+ *
  * (c) Ronald Boda 2022 <info@coboda.at>
  * @license GPL-3.0-or-later
  * For the full copyright and license information,
@@ -30,11 +30,6 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
                 'id' => 'primary'
             )
         ),
-    ),
-    'edit'        => array(
-        'buttons_callback' => array(
-            array('tl_ff_ranks', 'buttonsCallback')
-        )
     ),
     'list'        => array(
         'sorting'         => array(
@@ -125,24 +120,9 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
  * Class tl_ff_ranks
  */
 
-// Nicht benötigter CustomButton im Fußbereich 
+// Nicht benötigter CustomButton im Fußbereich
 class tl_ff_ranks extends Backend
- {
-    /**
-     * @param $arrButtons
-     * @param  DC_Table $dc
-     * @return mixed
-     */
-    public function buttonsCallback($arrButtons, DC_Table $dc)
-    {
-        if (Input::get('act') === 'edit')
-        {
-            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_ff_ranks']['customButton'] . '</button>';
-        }
-
-        return $arrButtons;
-    }
-
+{
 };
 
 
