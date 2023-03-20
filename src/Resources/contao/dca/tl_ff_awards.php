@@ -27,9 +27,9 @@ $GLOBALS['TL_DCA']['tl_ff_awards'] = array(
         'enableVersioning' => true,
         'sql'              => array(
             'keys' => array(
-                'id' => 'primary'
+            'id' => 'primary'
             )
-        ),
+        )
     ),
     'edit'        => array(
         'buttons_callback' => array(
