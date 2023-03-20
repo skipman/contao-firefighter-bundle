@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /*
  * This file is part of Contao Firefighter Bundle.
- *
+ * 
  * (c) Ronald Boda 2022 <info@coboda.at>
  * @license GPL-3.0-or-later
  * For the full copyright and license information,
@@ -19,55 +19,76 @@ use Contao\Input;
 /**
  * Table tl_ff_ranks
  */
-$GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
+$GLOBALS['TL_DCA']['tl_ff_ranks'] = array
+(
 
     // Config
-    'config'      => array(
+    'config'       => array
+    (
         'dataContainer'    => 'Table',
         'enableVersioning' => true,
-        'sql'              => array(
-            'keys' => array(
-                'id' => 'primary'
+        'sql'              => array
+        (
+            'keys' => array
+            (
+            'id'   => 'primary'
             )
         ),
     ),
-    'list'        => array(
-        'sorting'         => array(
+    'edit'        => array
+    (
+        'buttons_callback' => array
+        (
+            array('tl_ff_ranks', 'buttonsCallback')
+        )
+    ),
+    'list'        => array
+    (
+        'sorting'         => array
+        (
             'mode'        => 2, // Sorting mode by a fixed field
             'fields'      => array('ff_rank_long'),
             'flag'        => 1, // Sort by initial letter ascending
             'panelLayout' => 'filter;sort,search,limit'
         ),
-        'label'             => array(
+        'label'      => array
+        (
             'fields' => array('ff_rank_long'),
             'format' => '%s'
         ),
-        'global_operations' => array(
-            'all' => array(
+        'global_operations'  => array
+        (
+            'all' => array
+            (
                 'label'      => &$GLOBALS['TL_LANG']['MSC']['all'],
                 'href'       => 'act=select',
                 'class'      => 'header_edit_all',
                 'attributes' => 'onclick="Backend.getScrollOffset()" accesskey="e"'
             )
         ),
-        'operations'        => array(
-            'edit'   => array(
+        'operations' => array
+        (
+            'edit'   => array
+            (
                 'label' => &$GLOBALS['TL_LANG']['tl_ff_ranks']['edit'],
                 'href'  => 'act=edit',
                 'icon'  => 'edit.svg'
             ),
-            'copy'   => array(
+            'copy'   => array
+            (
                 'label' => &$GLOBALS['TL_LANG']['tl_ff_ranks']['copy'],
                 'href'  => 'act=copy',
                 'icon'  => 'copy.svg'
             ),
-            'delete' => array(
+            'delete' => array
+            (
                 'label'      => &$GLOBALS['TL_LANG']['tl_ff_ranks']['delete'],
                 'href'       => 'act=delete',
                 'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
             ),
-            'show'   => array(
+            'show'   => array
+            (
                 'label'      => &$GLOBALS['TL_LANG']['tl_ff_ranks']['show'],
                 'href'       => 'act=show',
                 'icon'       => 'show.svg',
@@ -76,19 +97,23 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
         )
     ),
     // Palettes
-    'palettes'    => array(
+    'palettes'    => array
+    (
         'default'      => '{rank_legend},ff_rank_short,ff_rank_long,ff_rank_pic',
     ),
 
     // Fields
-    'fields'      => array(
-        'id'             => array(
+    'fields'    => array(
+        'id'    => array
+        (
             'sql' => "int(10) unsigned NOT NULL auto_increment"
         ),
-        'tstamp'         => array(
+        'tstamp'         => array
+        (
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
-        'ff_rank_short'          => array(
+        'ff_rank_short'  => array
+        (
             'inputType'  => 'text',
             'exclude'    => true,
             'search'     => true,
@@ -98,7 +123,8 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
         ),
-        'ff_rank_long'          => array(
+        'ff_rank_long'   => array
+        (
             'inputType'  => 'text',
             'exclude'    => true,
             'search'     => true,
@@ -106,7 +132,7 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
             'eval'       => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
             'sql'        => "varchar(255) NOT NULL default ''"
         ),
-		'ff_rank_pic' => array
+		'ff_rank_pic'    => array
 		(
 			'exclude'    => true,
 			'inputType'  => 'fileTree',
@@ -120,9 +146,24 @@ $GLOBALS['TL_DCA']['tl_ff_ranks'] = array(
  * Class tl_ff_ranks
  */
 
-// Nicht benötigter CustomButton im Fußbereich
+// Nicht benötigter CustomButton im Fußbereich 
 class tl_ff_ranks extends Backend
-{
+ {
+    /**
+     * @param $arrButtons
+     * @param  DC_Table $dc
+     * @return mixed
+     */
+    public function buttonsCallback($arrButtons, DC_Table $dc)
+    {
+        if (Input::get('act') === 'edit')
+        {
+            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_ff_ranks']['customButton'] . '</button>';
+        }
+
+        return $arrButtons;
+    }
+
 };
 
 

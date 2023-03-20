@@ -32,7 +32,79 @@
       <trans-unit id="tl_member.honory.1">
         <source>Select if it is an honorary rank.</source>
         <target>Auswählen, wenn es ein Ehrendienstgrad ist</target>
+      </trans-unit>      
+      <trans-unit id="tl_member.member_since.0">
+        <source>Year of joining</source>
+        <target>Beitrittsjahr</target>
       </trans-unit>
+      <trans-unit id="tl_member.member_since.1">
+        <source>Member since</source>
+        <target>Mitglied seit</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local_legend">
+        <source>Local functions</source>
+        <target>Örtliche Funktionen</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local.0">
+        <source>local functions</source>
+        <target>Funktion(en)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local.1">
+        <source>local functions</source>
+        <target>Funktionen innerhalb der eigenen Wehr</target>
+      </trans-unit>
+      <trans-unit id="tl_member.group_functions_local.0">
+        <source>local functions</source>
+        <target>Funktion(en)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.group_functions_local.1">
+        <source>local functions</source>
+        <target>Funktionen innerhalb der eigenen Wehr</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local_start.0">
+        <source>local function from</source>
+        <target>Von</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local_start.1">
+        <source>local function start</source>
+        <target>Örtliche Funktion ausgeübt von (z.B. 2020)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local_end.0">
+        <source>local function until</source>
+        <target>Bis</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_local_end.1">
+        <source>local function end</source>
+        <target>Örtliche Funktion ausgeübt bis (z.B. 2023)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal_legend">
+        <source>Overlocal functions</source>
+        <target>Überörtliche Funktionen</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal.0">
+        <source>overlocal functions</source>
+        <target>Überörtliche Funktion(en)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal.1">
+        <source>overlocal functions</source>
+        <target>Überörtliche Funktionen (Abschnitt, Bezirk, Land, Bund)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal_start.0">
+        <source>overlocal function from</source>
+        <target>Von</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal_start.1">
+        <source>overlocal function start</source>
+        <target>Überörtliche Funktion ausgeübt von (z.B. 01/2020)</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal_end.0">
+        <source>overlocal function until</source>
+        <target>Bis</target>
+      </trans-unit>
+      <trans-unit id="tl_member.functions_overlocal_end.1">
+        <source>overlocal function end</source>
+        <target>Überörtliche Funktion ausgeübt bis (z.B. 2020)</target>
+      </trans-unit>      
     </body>
   </file>
 </xliff>
