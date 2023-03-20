@@ -36,7 +36,7 @@ System::loadLanguageFile('tl_ff_functions');
         'inputType'               => 'select',
         'options_callback' => function () {
             $options = array();
-            $data = \Database::getInstance()->execute("SELECT id,ff_rank_short,ff_rank_long FROM tl_ff_ranks ORDER BY ff_rank_long ASC");
+            $data = Contao\Database::getInstance()->execute("SELECT id,ff_rank_short,ff_rank_long FROM tl_ff_ranks ORDER BY ff_rank_long ASC");
             while ($data->next())
             {                
               $options[$data->id] = $data->ff_rank_long;
@@ -109,7 +109,7 @@ System::loadLanguageFile('tl_ff_functions');
         'inputType'               => 'select',
         'options_callback'        => function () {
             $options = [];
-            $data = \Database::getInstance()->execute("SELECT id,ff_function_short,ff_function_long,ff_function_overlocal FROM tl_ff_functions WHERE ff_function_overlocal = 0 ORDER BY ff_function_long ASC");
+            $data = Contao\Database::getInstance()->execute("SELECT id,ff_function_short,ff_function_long,ff_function_overlocal FROM tl_ff_functions WHERE ff_function_overlocal = 0 ORDER BY ff_function_long ASC");
             while ($data->next())
             {                
                 $options[$data->id] = $data->ff_function_long;
@@ -141,7 +141,7 @@ System::loadLanguageFile('tl_ff_functions');
         'inputType'               => 'select',
         'options_callback' => function () {
             $options = array();
-            $data = \Database::getInstance()->execute("SELECT id,ff_function_short,ff_function_long,ff_function_overlocal FROM tl_ff_functions WHERE ff_function_overlocal = 1 ORDER BY ff_function_long ASC");
+            $data = Contao\Database::getInstance()->execute("SELECT id,ff_function_short,ff_function_long,ff_function_overlocal FROM tl_ff_functions WHERE ff_function_overlocal = 1 ORDER BY ff_function_long ASC");
             while ($data->next())
             {                
               $options[$data->id] = $data->ff_function_long;
