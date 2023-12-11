@@ -1,67 +1,51 @@
 {
     "name": "skipman/contao-firefighter-bundle",
-    "description": "Adds a firebrigade-specific member management and a content element for operational resourses",
-    "license": "LGPL-3.0-or-later",
+    "description": "Fügt die Verwaltung feuerwehrspezifischer Daten hinzu",
+    "keywords": [
+        "contao",
+        "bundle",
+        "tag 3",
+        "tag 4"
+    ],
     "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ronald Boda",
-            "homepage": "https://github.com/skipman"
+            "email": "info@coboda.at",
+            "homepage": "https://coboda.at",
+            "role": "Developer"
         }
     ],
-    "homepage": "https://www.coboda.at",
     "support": {
         "issues": "https://github.com/skipman/contao-firefighter-bundle/issues",
         "source": "https://github.com/skipman/contao-firefighter-bundle"
     },
     "require": {
-        "php": "^7.4 || ^8.0",
-        "contao/core-bundle": "^4.13",
-        "symfony/config": "^5.4",
-        "symfony/dependency-injection": "^5.4",
-        "symfony/http-kernel": "^5.4"
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13 || ^5.0"
     },
     "require-dev": {
-        "bamarni/composer-bin-plugin": "^1.5",
-        "contao/manager-plugin": "^2.0",
-        "phpunit/phpunit": "^9.5",
-        "symfony/phpunit-bridge": "^6.1"
-    },
-    "conflict": {
-        "contao/manager-plugin": "<2.0 || >=3.0"
+        "contao/manager-plugin": "^2.12"
     },
     "autoload": {
         "psr-4": {
             "Skipman\\ContaoFirefighterBundle\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Skipman\\ContaoFirefighterBundle\\Tests\\": "tests/"
-        }
-    },
     "config": {
         "allow-plugins": {
-            "bamarni/composer-bin-plugin": true,
-            "contao-components/installer": true,
-            "contao/manager-plugin": true
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "contao-community-alliance/composer-plugin": true
         }
     },
     "extra": {
-        "bamarni-bin": {
-            "bin-links": false,
-            "target-directory": "tools"
-        },
         "contao-manager-plugin": "Skipman\\ContaoFirefighterBundle\\ContaoManager\\Plugin"
     },
     "scripts": {
-        "all": [
-            "@unit-tests",
-            "@ecs",
-            "@phpstan"
-        ],
-        "ecs": "@php tools/ecs/vendor/bin/ecs check src tests --config ecs.php --fix --ansi",
-        "phpstan": "@php tools/phpstan/vendor/bin/phpstan analyze --ansi",
-        "unit-tests": "@php vendor/bin/phpunit --colors=always"
-    }
+        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check config/ contao/ src/ templates/ tests/ --config tools/ecs/config.php --fix --ansi",
+        "unit-tests": "@php tools/phpunit/vendor/bin/phpunit -c tools/phpunit/phpunit.xml.dist"
+    },
+    "version": "1.0.0"
 }

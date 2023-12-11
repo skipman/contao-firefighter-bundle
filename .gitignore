@@ -1,10 +1,9 @@
-# Composer
-/composer.lock
+# Jetbrains
+/.idea/*
+
+# tools
 /vendor/
-
-# PhpUnit
-/.phpunit.result.cache
-/phpunit.xml
-
-# Tools
 /tools/*/vendor
+/composer.lock
+/.php-cs-fixer.cache
+/tools/phpunit/.phpunit.result.cache
