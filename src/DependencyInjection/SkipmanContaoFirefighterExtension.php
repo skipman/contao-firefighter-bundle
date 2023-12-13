@@ -49,6 +49,6 @@ class SkipmanContaoFirefighterExtension extends Extension
 
         $rootKey = $this->getAlias();
 
-        $container->setParameter($rootKey.'.foo.bar', $config['foo']['bar']);
+      //  $container->setParameter($rootKey.'.foo.bar', $config['foo']['bar']);
     }
 }

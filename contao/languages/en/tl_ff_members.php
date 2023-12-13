@@ -15,13 +15,15 @@ declare(strict_types=1);
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_ff_members']['first_legend'] = "Basic settings";
-$GLOBALS['TL_LANG']['tl_ff_members']['second_legend'] = "Advanced settings";
+$GLOBALS['TL_LANG']['tl_ff_members']['members_legend'] = "Firefighters";
+$GLOBALS['TL_LANG']['tl_ff_members']['basic_legend'] = "Basic data";
+$GLOBALS['TL_LANG']['tl_ff_members']['image_legend'] = "Image Settings";
+$GLOBALS['TL_LANG']['tl_ff_members']['contact_legend'] = "Contact data";
 
 /**
 * Global operations
 */
-$GLOBALS['TL_LANG']['tl_ff_members']['new'] = ["New", "Create a new element"];
+$GLOBALS['TL_LANG']['tl_ff_members']['new'] = ["New", "Create a new member"];
 
 /**
  * Operations
@@ -34,12 +36,17 @@ $GLOBALS['TL_LANG']['tl_ff_members']['show'] = "View record with ID: %s";
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_ff_members']['title'] = ["Title", "Geben Sie den Titel ein"];
-$GLOBALS['TL_LANG']['tl_ff_members']['selectField'] = ["Select Field", "Wählen Sie aus."];
-$GLOBALS['TL_LANG']['tl_ff_members']['checkboxField'] = ["Chosen Field", "Wählen Sie aus."];
-$GLOBALS['TL_LANG']['tl_ff_members']['multitextField'] = ["Multitext Field", "Geben Sie die Werte ein"];
-$GLOBALS['TL_LANG']['tl_ff_members']['addSubpalette'] = ["Erweiterte Einstellungen aktivieren", "Hier können Sie die erweiterten Einstellungen aktivieren."];
-$GLOBALS['TL_LANG']['tl_ff_members']['textareaField'] = ["Textarea", "Geben Sie einen Text ein"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_title'] = ["Title", "Enter the member's title in front of it (e.g. Dr., Ing. ..."];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_firstname'] = ["Firstname", "Enter the first name"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_lastname'] = ["Lastname", "Enter the family name"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_suffix'] = ["Suffix", "Enter the member's trailing title (e.g. MSc, MBA...)"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_rank'] = ["Rank", "Select the member's rank"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_rank_honory'] = ["Ehrendienstgrad?", "Tick ​​if it is an honorary rank"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_function'] = ["Function", "Select the member's role"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_homebase'] = ["Member at", "Indicate the member's home fire department"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_homebase_url'] = ["Homepage", "Enter the fire department’s internet address (URL)."];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_email'] = ["E-Mail-Address", "Enter the member's email address (name@feuerwehr.gv.at)"];
+$GLOBALS['TL_LANG']['tl_ff_members']['ff_member_phone'] = ["Phonenumber", "Enter the member's phone number (if approved by the member!!)"];
 
 /**
  * References
@@ -47,7 +54,9 @@ $GLOBALS['TL_LANG']['tl_ff_members']['textareaField'] = ["Textarea", "Geben Sie 
 $GLOBALS['TL_LANG']['tl_ff_members']['firstoption'] = "Erste Option";
 $GLOBALS['TL_LANG']['tl_ff_members']['secondoption'] = "Zweite Option";
 
+
+
 /**
  * Buttons
  */
-$GLOBALS['TL_LANG']['tl_ff_members']['customButton'] = "Custom Routine starten";
+

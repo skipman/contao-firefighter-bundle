@@ -1,4 +1,4 @@
-s<?php
+<?php
 
 /*
  * This file is part of Contao Firefighter Bundle.
@@ -11,8 +11,8 @@ s<?php
  */
 
 use Contao\DC_Table;
-
-$GLOBALS['TL_DCA']['tl_ff_functions'] = [
+ 
+$GLOBALS['TL_DCA']['tl_ff_ranks'] = [
     'config' => [
         'dataContainer' => DC_Table::class,
         'enableVersioning' => true,
@@ -26,13 +26,13 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = [
     'list' => [
         'sorting' => [
             'mode' => 1,
-            'fields' => ['ff_function_short'],
+            'fields' => ['ff_rank_short'],
             'flag' => 1,
             'panelLayout' => 'search,limit'
         ],
         'label' => [
-            'fields' => ['ff_function_short','ff_function_long'],
-            'format' => '%s <span style="color: #999999; padding-left: 3px;"> (%s)</span>',
+            'fields' => ['ff_rank_short', 'ff_rank_long'],
+            'format' => '%s (%s)',
         ],
         'global_operations' => [
             'all' => [
@@ -47,19 +47,13 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = [
                 'href' => 'act=edit',
                 'icon' => 'edit.svg',
             ],
-            'copy'   => [
-                'href'  => 'act=copy',
-                'icon'  => 'copy.svg'
-            ],
             'delete' => [
                 'href' => 'act=delete',
                 'icon' => 'delete.svg',
-                'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
             ],
             'show' => [
                 'href' => 'act=show',
-                'icon' => 'show.svg',
-                'attributes' => 'style="margin-right:3px"'
+                'icon' => 'show.svg'
             ],
         ],
     ],
@@ -70,25 +64,20 @@ $GLOBALS['TL_DCA']['tl_ff_functions'] = [
         'tstamp' => [
             'sql' => ['type' => 'integer', 'unsigned' => true, 'default' => 0]
         ],
-        'ff_function_short' => [
+        'ff_rank_short' => [
             'search' => true,
             'inputType' => 'text',
             'eval' => ['tl_class' => 'w50', 'maxlength' => 255, 'mandatory' => true],
             'sql' => ['type' => 'string', 'length' => 255, 'default' => '']
         ],
-        'ff_function_long' => [
+        'ff_rank_long' => [
             'search' => true,
             'inputType' => 'text',
-            'eval' => ['tl_class' => 'w50', 'maxlength' => 255, 'mandatory' => true],
+            'eval' => ['tl_class' => 'w50', 'maxlength' => 255, 'mandatory' => false],
             'sql' => ['type' => 'string', 'length' => 255, 'default' => '']
-        ],
-        'ff_function_overlocal' => [
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'w50 m12', 'mandatory' => false],
-            'sql' => ['type' => 'boolean', 'default' => false]
         ]
     ],
     'palettes' => [
-        'default' => '{ff_function_legend},ff_function_short,ff_function_long,ff_function_overlocal'
+        'default' => '{ff_rank_legend},ff_rank_short,ff_rank_long'
     ],
 ];

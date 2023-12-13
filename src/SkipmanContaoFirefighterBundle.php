@@ -37,4 +37,5 @@ class SkipmanContaoFirefighterBundle extends Bundle
     {
         parent::build($container);
     }
+
 }

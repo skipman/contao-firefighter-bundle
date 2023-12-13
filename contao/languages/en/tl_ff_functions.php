@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_ff_functions']['function_legend'] = "FF Functions";
+$GLOBALS['TL_LANG']['tl_ff_functions']['ff_function_legend'] = "FF Functions";
 
 /**
  * Operations

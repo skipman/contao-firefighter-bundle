@@ -19,9 +19,4 @@ use Contao\Model;
 class FfMembersModel extends Model
 {
     protected static $strTable = 'tl_ff_members';
-}
-
-class FfFunctionsModel extends Model
-{
-    protected static $strTable = 'tl_ff_functions';
-}
+};

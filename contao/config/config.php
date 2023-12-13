@@ -12,19 +12,24 @@
 
 use Skipman\ContaoFirefighterBundle\Model\FfMembersModel;
 use Skipman\ContaoFirefighterBundle\Model\FfFunctionsModel;
+use Skipman\ContaoFirefighterBundle\Model\FfRanksModel;
 
 /**
  * Backend modules
  */
-$GLOBALS['BE_MOD']['firefighter_module']['firefighter_collection'] = array(
+$GLOBALS['BE_MOD']['firefighter_module']['firefighter_members'] = array(
     'tables' => array('tl_ff_members')
 );
 $GLOBALS['BE_MOD']['firefighter_module']['firefighter_functions'] = array(
     'tables' => array('tl_ff_functions')
+);
+$GLOBALS['BE_MOD']['firefighter_module']['firefighter_ranks'] = array(
+    'tables' => array('tl_ff_ranks')
 );
 
 /**
  * Models
  */
 $GLOBALS['TL_MODELS']['tl_ff_members'] = FfMembersModel::class;
-$GLOBALS['TL_MODELS']['tl_ff_function'] = FfFunctionsModel::class;
+$GLOBALS['TL_MODELS']['tl_ff_functions'] = FfFunctionsModel::class;
+$GLOBALS['TL_MODELS']['tl_ff_ranks'] = FfRanksModel::class;

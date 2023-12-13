@@ -18,8 +18,9 @@ use Skipman\ContaoFirefighterBundle\Controller\FrontendModule\FfMemberListingCon
  * Backend modules
  */
 $GLOBALS['TL_LANG']['MOD']['firefighter_module'] = 'FIREBRIGADE';
-$GLOBALS['TL_LANG']['MOD']['firefighter_collection'] = ['FF Members', 'Manage fire brigade-specific member data'];
+$GLOBALS['TL_LANG']['MOD']['firefighter_members'] = ['FF Members', 'Manage fire brigade-specific member data'];
 $GLOBALS['TL_LANG']['MOD']['firefighter_functions'] = ['FF Functions', 'Manage fire brigade-specific functions'];
+$GLOBALS['TL_LANG']['MOD']['firefighter_Ranks'] = ['FF Ranks', 'Manage fire brigade-specific ranks'];
 
 /**
  * Frontend modules
